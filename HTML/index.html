@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- הכרזה על סוג המסמך (HTML5) -->
+<html lang="en">
+<!-- תגית הפותחת של מסמך ה-HTML, עם הגדרת השפה לאנגלית -->
+<head>
+    <meta charset="UTF-8">
+    <!-- הגדרת קידוד תווים (UTF-8) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- תגית זו מאפשרת התאמה למכשירים ניידים (רוחב הדף מתאים לרוחב המסך) -->
+    <title>Phone Book</title>
+    <!-- הגדרת כותרת הדף שמופיעה בלשונית הדפדפן -->
+    <link rel="stylesheet" href="/Css/liliAndlidor.css">
+    <!-- קישור לקובץ CSS חיצוני לצורך עיצוב הדף -->
+</head>
+<body>
+    <!-- גוף הדף - כל התוכן שנראה בדף -->
+    <header>
+        <!-- כותרת הדף הראשית -->
+        <h1>Phone Book</h1>
+    </header>
+    <main>
+        <!-- אזור התוכן העיקרי של הדף -->
+        <div id="contactListContainer">
+            <!-- תיבת חיפוש לאיתור אנשי קשר -->
+            <input type="text" id="searchInput" placeholder="Search contacts...">
+            <!-- כפתור להוספת איש קשר -->
+            <button id="addContactButton">Add Contact</button>
+            <!-- כפתור למחיקת כל אנשי הקשר -->
+            <button id="deleteAllButton">Delete All Contacts</button>
+            
+            <!-- אזור בו יוצגו אנשי הקשר -->
+            <div id="contactList"></div>
+             
+            <!-- כפתור להפעלת אפקט של שינוי צבע -->
+            <button id="colorSplashButton">Color Splash!</button>
+            <!-- אלמנט בו יופיע אפקט שינוי הצבע -->
+            <div id="colorSplashEffect"></div>
+
+            <!-- הודעה שמוצגת כאשר אין אנשי קשר -->
+            <p id="noContactsMessage" style="display: none;">No contacts available.</p>
+        </div>
+        
+        <!-- חלונית (פופאפ) להוספת או עריכת איש קשר -->
+        <div id="contactForm" class="popup">
+            <div class="popup-content">
+                <!-- כותרת חלונית ההוספה או העריכה -->
+                <h2 id="formTitle">Add Contact</h2>
+                <form>
+                    <!-- שדה להזנת שם איש הקשר -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <!-- שדה להזנת מספר טלפון -->
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" required>
+                    <!-- שדה להזנת כתובת -->
+                    <label for="address">Address:</label>
+                    <input type="text" id="address">
+                    <!-- שדה להזנת דוא"ל -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                    <!-- שדה להזנת מידע נוסף -->
+                    <label for="text">Additional Info:</label>
+                    <textarea id="text"></textarea>
+                    <!-- כפתור לשמירת איש הקשר -->
+                    <button type="submit">Save</button>
+                    <!-- כפתור לביטול פעולת ההוספה/עריכה -->
+                    <button type="button" id="cancelButton">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- חלונית לצפייה בפרטי איש קשר קיים -->
+        <div id="viewContactPopup" class="popup">
+            <div class="popup-content">
+                <!-- כותרת חלונית הצפייה -->
+                <h2>Contact Details</h2>
+                <!-- הצגת שם איש הקשר -->
+                <p id="contactName"></p>
+                <!-- הצגת מספר הטלפון -->
+                <p id="contactPhone"></p>
+                <!-- הצגת הכתובת -->
+                <p id="contactAddress"></p>
+                <!-- הצגת הדוא"ל -->
+                <p id="contactEmail"></p>
+                <!-- הצגת הערות נוספות -->
+                <p id="contactNotes"></p>
+                <!-- כפתור לסגירת החלונית -->
+                <button class="close">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- אזור תחתון בדף המכיל קרדיטים -->
+        <p>Lidor tubul and Lili vainer 2024</p>
+    </footer>
+    
+    <!-- קישור לקובץ JavaScript חיצוני לניהול פונקציונליות הדף -->
+    <script src="/Js/liliAndlidor.js"></script>
+</body>
+</html>
