@@ -1,180 +1,189 @@
 /* עיצוב כללי */
 body {
-  font-family: Arial, sans-serif; /* גופן כללי לכל האתר */
-  background-color: #ffffff; /* צבע רקע כללי */
-  color: #ffffff; /* צבע טקסט */
-  margin: 0; /* אין מרווח מסביב לעמוד */
-  padding: 0; /* אין רווחים פנימיים */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
+/* כותרת */
 header {
-  background-color: #292828; /* צבע רקע של ההדר */
-  color: #ffffff; /* צבע טקסט בכותרת */
-  text-align: center; /* יישור הטקסט במרכז */
-  padding: 1em 0; /* ריווח פנימי בהדר למעלה ולמטה */
+  background: linear-gradient(to right, #003366, #336699);
+  color: white;
+  text-align: center;
+  padding: 1.5em 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
+/* תוכן */
 main {
-  padding: 1em; /* ריווח פנימי לתוכן הראשי */
+  padding: 2em;
 }
 
+/* כפתורים */
 button {
-  background-color: #686363; /* צבע רקע כפתור */
-  color: #fff; /* צבע טקסט */
-  border: none; /* אין מסגרת לכפתור */
-  padding: 0.5em 1em; /* ריווח פנימי בכפתור */
-  margin: 0.5em; /* מרווח חיצוני מסביב לכפתור */
-  cursor: pointer; /* הופכת את הסמן ליד */
-  border-radius: 5px; /* פינות מעוגלות לכפתור */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  margin: 0.5em;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #272424; /* שינוי צבע רקע בעת ריחוף על הכפתור */
+  background-color: #388e3c;
 }
 
+/* שדות טקסט */
 input, textarea {
-  width: 100%; /* רוחב מלא לשדה טקסט ותיבת טקסט */
-  padding: 0.5em; /* ריווח פנימי בתוך השדה */
-  margin-bottom: 1em; /* מרווח חיצוני תחתון */
-  border: 1px solid #f9f9f9; /* מסגרת בהירה לשדות */
-  border-radius: 5px; /* פינות מעוגלות */
-  background-color: #f7f3f3; /* צבע רקע בהיר לשדה */
-  color: #0f0f0f; /* צבע טקסט כהה */
+  width: 100%;
+  padding: 0.6em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease;
 }
 
 input:focus, textarea:focus {
-  outline: none; /* מסירה מסגרת דפדפן ברירת מחדל בעת פוקוס */
-  border-color: #302f2f; /* שינוי צבע מסגרת בעת פוקוס */
+  border-color: #336699;
+  outline: none;
 }
 
+/* חלונית קופצת */
 .popup {
-  display: none; /* חלונית מוסתרת ברירת מחדל */
-  position: fixed; /* מיקום חלונית קבוע על כל המסך */
-  top: 0; /* מיקום למעלה */
-  left: 0; /* מיקום בצד שמאל */
-  width: 100%; /* רוחב מלא של החלונית */
-  height: 100%; /* גובה מלא של החלונית */
-  background: rgba(128, 124, 124, 0.8); /* רקע אפור שקוף */
-  justify-content: center; /* יישור תוכן במרכז אופקי */
-  align-items: center; /* יישור תוכן במרכז אנכי */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
 .popup-content {
-  background-color: #333; /* רקע תוכן החלונית */
-  padding: 2em; /* ריווח פנימי */
-  border-radius: 0px; /* פינות מרובעות */
-  max-width: 500px; /* רוחב מקסימלי לחלונית */
-  width: 90%; /* רוחב יחסי לחלון הדפדפן */
-  text-align: left; /* יישור תוכן לשמאל */
-  position: relative; /* מאפשר מיקום הכפתור בתוך התוכן */
+  background-color: #fff;
+  color: #000;
+  padding: 2em;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 .popup-content h2 {
-  margin-top: 0; /* אין מרווח עליון */
-  background-color: #444; /* צבע רקע לכותרת */
-  color: #fff; /* צבע טקסט */
-  padding: 0.5em; /* ריווח פנימי לכותרת */
-  border-radius: 0px; /* כותרת עם פינות מרובעות */
-  text-align: center; /* יישור מרכזי לכותרת */
-}
-
-.popup-content p {
-  margin: 0.5em 0; /* מרווח מעל ומתחת לפסקה */
+  margin-top: 0;
+  color: #003366;
+  text-align: center;
 }
 
 .popup-content .close {
-  position: absolute; /* מיקום יחסי לחלונית */
-  top: 10px; /* מיקום למעלה */
-  right: 10px; /* מיקום לימין */
-  background-color: #444; /* רקע לכפתור סגירה */
-  color: #fff; /* צבע טקסט לכפתור סגירה */
-  border: none; /* ללא מסגרת */
-  padding: 0.5em; /* ריווח פנימי */
-  cursor: pointer; /* סמן יד בעת ריחוף */
-  border-radius: 5px; /* פינות מעוגלות */
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 0.3em 0.6em;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.popup-content .close:hover {
-  background-color: #666; /* שינוי צבע רקע כפתור בעת ריחוף */
-}
-
+/* תחתית העמוד */
 footer {
-  padding: 3px; /* ריווח פנימי קטן */
-  background-color: rgb(51, 49, 49); /* צבע רקע לכותרת תחתונה */
-  text-align: center; /* יישור מרכזי לטקסט */
+  padding: 0.5em;
+  background-color: #003366;
+  text-align: center;
+  color: white;
+  font-size: 0.9em;
 }
 
+/* אנשי קשר */
 #contactList {
-  display: flex; /* תצוגה של פריסה גמישה */
-  flex-direction: column; /* פריסה אנכית של אנשי הקשר */
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .contact {
-  background-color: #413f3f; /* צבע רקע לכל איש קשר */
-  padding: 1em; /* ריווח פנימי */
-  margin-bottom: 0.5em; /* מרווח תחתון בין אנשי קשר */
-  border-radius: 5px; /* פינות מעוגלות לאנשי קשר */
-  display: flex; /* פריסה גמישה עבור הכפתורים והמידע */
-  justify-content: space-between; /* מרווח שווה בין המידע לכפתורים */
-  align-items: center; /* יישור אנכי למרכז */
+  background-color: #e3ecf7;
+  padding: 1em;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .contact:hover {
-  background-color: #2c2626; /* שינוי צבע רקע בעת ריחוף על איש קשר */
+  background-color: #d0dff0;
 }
 
 .contact .contact-buttons button {
-  background-color: #555; /* צבע רקע לכפתורי אנשי הקשר */
-  margin-left: 0.5em; /* מרווח שמאלי בין הכפתורים */
+  background-color: #336699;
+  margin-left: 0.5em;
 }
 
 .contact .contact-buttons button:hover {
-  background-color: #666; /* שינוי צבע רקע לכפתורים בעת ריחוף */
+  background-color: #254d73;
 }
 
 #noContactsMessage {
-  text-align: center; /* יישור מרכזי לטקסט ההודעה */
-  color: #bbb; /* צבע טקסט אפור */
+  text-align: center;
+  color: #777;
+  margin-top: 2em;
 }
 
-/* עיצוב כפתור צבע */
+/* כפתור השפרצת צבע */
 #colorSplashButton {
-  background-color: #333; /* צבע רקע לכפתור */
-  color: #ffffff; /* צבע טקסט */
-  border: none; /* ללא מסגרת */
-  padding: 0.5em 1em; /* ריווח פנימי לכפתור */
-  margin: 0.5em; /* מרווח חיצוני */
-  cursor: pointer; /* סמן יד בעת ריחוף */
-  border-radius: 5px; /* פינות מעוגלות לכפתור */
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  margin: 0.5em;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 #colorSplashButton:hover {
-  background-color: #444; /* שינוי צבע רקע בעת ריחוף */
+  background-color: #e68900;
 }
 
-/* עיצוב אפקט השפרצת צבע */
+/* אפקט השפרצה */
 #colorSplashEffect {
-  position: fixed; /* מיקום קבוע על המסך */
-  top: 0; /* מיקום למעלה */
-  left: 0; /* מיקום בצד שמאל */
-  width: 100%; /* רוחב מלא של המסך */
-  height: 100%; /* גובה מלא של המסך */
-  z-index: 20; /* הצבת האלמנט מעל תוכן אחר */
-  display: none; /* מוסתר ברירת מחדל */
-  pointer-events: none; /* מניעת לחיצה על האפקט */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  display: none;
+  pointer-events: none;
 }
 
 #colorSplashEffect.active {
-  display: block; /* הצגת האפקט כשהוא פעיל */
-  background: radial-gradient(circle, rgba(98, 91, 95, 0.6), transparent); /* גרדיינט מעגלי של צבעים */
-  animation: colorSplashAnimation 1s forwards; /* הפעלת אנימציה של האפקט */
+  display: block;
+  background: radial-gradient(circle, rgba(255, 204, 128, 0.4), transparent);
+  animation: colorSplashAnimation 1s forwards;
 }
 
 @keyframes colorSplashAnimation {
   from {
-      background: radial-gradient(circle, rgba(65, 64, 65, 0.6), transparent); /* התחלה של האפקט עם גרדיינט צבע */
+    background: radial-gradient(circle, rgba(255, 204, 128, 0.7), transparent);
   }
   to {
-      background: transparent; /* סיום האפקט עם שקיפות */
+    background: transparent;
   }
 }
